@@ -75,13 +75,10 @@ inicializaMarcadores = () => {
         var digitado = campo.val();
         var comparavel = frase.substr(0,digitado.length);
 
-        if (digitado == comparavel) {
-            campo.addClass('borda-verde');
-            campo.removeClass('borda-vermelho');
-        } else {
-            campo.addClass('borda-vermelho');
-            campo.removeClass('borda-verde');
-        }
+        var ehCorreto = (digitado == comparavel);
+
+        campo.toggleClass("borda-verde", ehCorreto);
+        campo.toggleClass("borda-vermelha", !ehCorreto);
     });
 }
 
