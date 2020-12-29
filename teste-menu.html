@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        nav {background:#FFF;float:left;}
+        nav ul {text-align:center;}
+        nav ul li {float:left;display:inline;}
+        nav ul li:hover {background:#E6E6E6;}
+        nav ul li a {display:block;padding:15px 25px;color:#444;}
+        nav ul li ul {position:absolute;width:200px;background:#FFF; }
+        nav ul li ul li {width:110px;}
+        nav ul li ul li a {display:block;padding:15px 10px;color:#444;}
+        nav ul li ul li:hover a {background:#F7F7F7;}
+        nav ul li ul.fallback {display:none;}
+        nav ul li:hover ul.fallback {display:block;}
+        /*--------------------------------------*/
+        #dropdown{
+            cursor: pointer;
+        }
+        .hide{
+            display: none;
+        }
+        .z-indez {
+            z-index: 2;
+        }
+    </style>
+    <!--    https://css-tricks.com/simple-jquery-dropdowns/ -->
+</head>
+<body>
+
+<!--<h1 id="dropdown">Menu</h1>-->
+<!--<ul class="hide" id="opcoes">-->
+<!--    <li><a href="">Massas</a></li>-->
+<!--    <li><a href="">Carnes</a></li>-->
+<!--    <li><a href="">Saladas e Vegetais</a></li>-->
+<!--</ul>-->
+
+<!--teste simples-->
+<nav>
+    <ul>
+        <li><a href="#">Link 1</a></li>
+        <li>
+            <a href="#">Link 2</a>
+            <ul class="fallback">
+                <li><a href="#">Sub-Link 1</a></li>
+                <li><a href="#">Sub-Link 2</a></li>
+                <li><a href="#">Sub-Link 3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Link 3</a>
+            <ul class="fallback">
+                <li><a href="#">Sub-Link 1</a></li>
+                <li><a href="#">Sub-Link 2</a></li>
+                <li><a href="#">Sub-Link 3</a></li>
+                <li><a href="#">Sub-Link 4</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Link 4</a></li>
+        <li><a href="#">Link 5</a></li>
+        <li><a href="#">Link 6</a></li>
+    </ul>
+</nav>
+<!--fim teste simples-->
+<script src="public/js/jquery.js"></script>
+<script>
+    // $("#dropdown").click(function() { funciona, é bom para o mobile
+    //     $("#opcoes").toggleClass();
+    // });
+// ---------------------------------------------
+    $('nav li ul').hide().removeClass('fallback');
+    $('nav li').hover(
+        function () {
+            $('ul', this).stop().slideDown(100);
+        },
+        function () {
+            $('ul', this).stop().slideUp(100);
+        }
+    );
+
+
+</script>
+
+</body>
+</html>

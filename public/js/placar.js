@@ -1,3 +1,10 @@
+/* mostar  placar */
+$('#botao-placar').click(mostrarPlacar);
+
+function mostrarPlacar(){
+    $('.placar').stop().slideToggle(600);
+}
+
 /*****************************************/
 /* Insere placar */
 function InserePlacar() {
@@ -9,6 +16,16 @@ function InserePlacar() {
     var linha =  novaLinha(usuario,numeroPalavra);
     linha.find('.botao-remover').click(removeLinha);
     corpoTabela.prepend(linha);
+    $('.placar').slideDown(500);
+    scrollPlacar();
+}
+
+/* scrool do placar */
+function scrollPlacar() {
+    var posicaoPlacar = $('.placar').offset().top;
+    $('body').animate({
+        scrollTop: posicaoPlacar+'px'
+    }, 1000);
 }
 
 /* novalinha linha do placar */
@@ -34,5 +51,29 @@ function novaLinha(usuario,numeroPalavra){
 /* remover linha do placar */
 function removeLinha() {
     event.preventDefault()
-    $(this).parent().parent().remove();
+    $(this).parent().parent().fadeOut(1000);
+    setTimeout(() =>  linha.remove(),1000);
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

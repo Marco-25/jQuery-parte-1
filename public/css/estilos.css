@@ -1,3 +1,6 @@
+body {
+    overflow-y: scroll;
+}
 .frase {
     font-size: 20px;
     text-align: left;
@@ -26,3 +29,29 @@
 .borda-vermelha {
     border: 5px solid red;
 }
+
+.placar { display: none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
