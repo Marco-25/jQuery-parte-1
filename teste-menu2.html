@@ -3,97 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="public/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="public/slick/slick-theme.css"/>
     <style>
-        #conteudo{
-            width:100%;
-            height:300px;
-            background:#36C;
-        }
-        .menu{
-            width:1365px;
-            height:30px;
-            background:#F00;
-            margin:0px auto;
-        }
-        .menu1{
-            width:450px;
-            height:30px;
-            background:#FFF;
-        }
-        .menu1 li{
-            width:150px;
-            height:30px;
-            background:#FF0;
-            list-style:none;
-            float:left;
-        }
-        .menu2{
-            width:150px;
-            height:90px;
-            background:0;
-            margin-top:50px;
-            position:relative;
-            display:block;
-        }
-        .menu2 li{
-            width:150px;
-            height:30px;
-            background:#C30;
-            top:20px;
-            position:relative;
-        }
-        .menu2 li:hover{
-            width:150px;
-            height:30px;
-            background:#C60;
-            top:20px;
-            position:relative;
-        }
-        menu1 li ul li .open{
-            widht:150px;
-            height:500px;
-            background:#096;
-            position:absolute;
-            display:block;
-        }
+        body { background: #333}
     </style>
 </head>
 <body>
 
+    <div class="slider center">
+        <div class=""><img src="https://i2.wp.com/marketingcomcafe.com.br/wp-content/uploads/2017/12/banco-imagens-gratis.png?w=720&ssl=1" alt=""> </div>
+
+        <div class="">
+            <img src="https://www.lupadigital.info/wp-content/uploads/2018/05/imagens-gratis.jpg" alt="">
+        </div>
+
+        <div class=""><img src="https://www.familiasemfronteiras.com.br/wp-content/uploads/2016/08/14482311_1604858293152444_7370155208397029376_n.jpg" alt=""></div>
+        <div></div>
+    </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<div id="conteudo">
-    <nav class="menu">
-        <ul class="menu1">
-            <li class="open">Teste1
-                <ul class="menu2">
-                    <li>Sub-Teste1</li>
-                    <li>Sub-Teste2</li>
-                </ul>
-            </li>
-            <li class="open">Teste2
-                <ul class="menu2">
-                    <li>Sub-Teste1</li>
-                    <li>Sub-Teste2</li>
-                </ul>
-            </li>
-            <li>Teste3</li>
-        </ul>
-    </nav>
-</div>
-
-<script src="public/js/jquery.js"></script>
+<script src="public/slick/slick.min.js"></script>
 <script>
+    $(document).ready(function() {
+        $('.slider').slick({
 
-    $(function () {
-        $(".menu2").hide();
 
-        $(".open").stop(true, true).mouseover(function() {
-            $(".menu2").fadeIn(100).animate({ top: '-50' }, 400);
         });
 
-        $(".open").mouseleave(function() {
-            $(".menu2").stop(true, true).fadeTo('fast').animate({ top: '1' }, 100).hide();
-        })
     });
 
 </script>

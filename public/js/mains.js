@@ -9,6 +9,7 @@ $(  /* mesma coisa que colocar $(document).ready(function(){...})*/
     inicializaCronometro();
     inicializaMarcadores();
     $('#botao-reiniciar').click(reiniciaJogo);
+    atualizaPlacar();
 });
 
 function atualizatempoInicail(tempo) {

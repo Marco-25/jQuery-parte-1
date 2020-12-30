@@ -33,12 +33,33 @@ body {
 .placar { display: none;}
 
 
+#erro{
+    display: none;
+}
 
+#spinner{
+    display: none;
+    height: 30px;
+}
 
+#frase-id{
+    width: 30px;
+    margin-left: 5px;
+    padding: 0 1rem;
+    border: 1px solid cyan;
+}
 
+#botao-sync {
+    float: right;
+}
 
+.select-user{
+   display: inline-block;
+}
 
-
+#usuarios{
+    display: block;
+}
 
 
 
